@@ -26,8 +26,7 @@ Este repositorio contiene mis prácticas, ejercicios y proyectos desarrollados d
 ## 📈 Plan de Actualización (Semestre actual)
 Este repositorio se actualiza semanalmente conforme avanzan las clases. Próximos objetivos:
 - [ ] Conexión a bases de datos con **SQLite**.
-- [ ] Desarrollo de interfaces gráficas con **Tkinter**.
-- [ ] Implementación de lógica para el proyecto **Nexus-Core**.
+- [ ] Desarrollo de interfaces gráficas 
 
 ---
 
