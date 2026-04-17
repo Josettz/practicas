@@ -33,7 +33,7 @@ Este repositorio se actualiza semanalmente conforme avanzan las clases. Próximo
 ## 👤 Sobre mí
 * **Estudiante:** Jose Antonio Torres
 * **Carrera:** Ingeniería de Software (UNEMI)
-* **Enfoque:** Desarrollo Backend y Programación Orientada a Objetos.
+* **Enfoque:** Desarrollo Full stack.
 
 ---
 *Documentación generada para seguimiento académico.*
