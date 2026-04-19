@@ -22,5 +22,9 @@ def suma(n1,n2):
     return n1 + n2
 
 
-print(suma(1,2))
+print(suma(n1=2,n2=3))
 
+def suma(*args,):
+    return args
+
+print(suma(3,4,5,5,5,5,5,"hola"))

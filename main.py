@@ -9,20 +9,17 @@ class OmniStoreApp:
         self.root.geometry("600x650")
         self.root.config(bg="#f0f0f0")
 
-        # --- TITULO ---
         self.label_titulo = tk.Label(self.root, text="SISTEMA DE INVENTARIO", 
                                      font=("Arial", 18, "bold"), bg="#f0f0f0", fg="#333")
         self.label_titulo.pack(pady=10)
 
-        # --- CONTENEDOR DE ENTRADA (FRAME) ---
         frame = tk.LabelFrame(self.root, text=" Registro de Producto ", font=("Arial", 10, "bold"), padx=20, pady=20)
         frame.pack(pady=10, padx=20, fill="x")
 
-        # Campos de texto (Labels y Entries)
         tk.Label(frame, text="Nombre:").grid(row=0, column=0, sticky="w", pady=5)
         self.entry_nombre = tk.Entry(frame, width=30)
         self.entry_nombre.grid(row=0, column=1, pady=5)
-        self.entry_nombre.focus() # Pone el cursor aquí al iniciar
+        self.entry_nombre.focus() 
 
         tk.Label(frame, text="Precio ($):").grid(row=1, column=0, sticky="w", pady=5)
         self.entry_precio = tk.Entry(frame, width=30)
@@ -32,21 +29,17 @@ class OmniStoreApp:
         self.entry_stock = tk.Entry(frame, width=30)
         self.entry_stock.grid(row=2, column=1, pady=5)
 
-        # Botón Guardar
         self.btn_guardar = tk.Button(frame, text="GUARDAR PRODUCTO", command=self.agregar_producto,
                                      bg="#4CAF50", fg="white", font=("Arial", 10, "bold"), cursor="hand2")
         self.btn_guardar.grid(row=3, columnspan=2, sticky="we", pady=15)
 
-        # --- TABLA (TREEVIEW) ---
         self.tabla = ttk.Treeview(self.root, columns=("Precio", "Stock"), height=10)
         self.tabla.pack(pady=10, padx=20, fill="x")
 
-        # Configurar encabezados de tabla
         self.tabla.heading("#0", text="Nombre del Producto", anchor="center")
         self.tabla.heading("Precio", text="Precio Unitario", anchor="center")
         self.tabla.heading("Stock", text="Cant. Disponible", anchor="center")
 
-        # --- BOTONES DE ACCIÓN ---
         botonera = tk.Frame(self.root, bg="#f0f0f0")
         botonera.pack(pady=10)
 
@@ -58,7 +51,6 @@ class OmniStoreApp:
                                      bg="#2196F3", fg="white", font=("Arial", 9, "bold"), width=25)
         self.btn_limpiar.grid(row=0, column=1, padx=5)
 
-    # --- LÓGICA DEL SISTEMA ---
 
     def validar_formulario(self):
         """Verifica que los datos sean correctos antes de procesar"""
@@ -79,10 +71,8 @@ class OmniStoreApp:
             precio = self.entry_precio.get()
             stock = self.entry_stock.get()
             
-            # Insertar en la interfaz
             self.tabla.insert("", "end", text=nombre, values=(f"${precio}", stock))
             
-            # Limpiar entradas
             self.entry_nombre.delete(0, tk.END)
             self.entry_precio.delete(0, tk.END)
             self.entry_stock.delete(0, tk.END)
